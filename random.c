@@ -6,9 +6,15 @@
 // - convert ASCII value to character
 // - return character 
 
+#include <time.h>
+#include <stdlib.h>
+
 
 char randchar()
 {
+    srand(time(NULL));
+    int r = rand();
+
     char randomLetter;
 
     // random number generation
