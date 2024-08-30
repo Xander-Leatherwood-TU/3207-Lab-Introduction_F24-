@@ -10,9 +10,7 @@
 
 char randchar(int randomNumber)
 {
-
     char randomLetter;
-
 
     // convert number to char
     randomLetter = (char)randomNumber;
