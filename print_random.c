@@ -4,6 +4,12 @@
 #include "random.h"
 
 char* rand_string(char* s, size_t size);
+char* rand_string_alloc(size_t size);
+
+int main()
+{
+    return 0;
+}
 
 char* rand_string_alloc(size_t size)
 {
