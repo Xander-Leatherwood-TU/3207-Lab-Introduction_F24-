@@ -8,6 +8,11 @@ char* rand_string_alloc(size_t size);
 
 int main()
 {
+    // allocate memory for s-char string
+    // call random character generator s times
+    // each time, add random character to string
+    // when finished, print string
+    
     return 0;
 }
 
