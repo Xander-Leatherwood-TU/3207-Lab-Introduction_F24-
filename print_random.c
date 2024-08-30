@@ -1,18 +1,20 @@
 //Given Project code
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "random.h"
 
-char* rand_string(char* s, size_t size);
 char* rand_string_alloc(size_t size);
+void rand_string(char* s, size_t size);
 
 int main()
 {
-    // allocate memory for s-char string
-    // call random character generator s times
-    // each time, add random character to string
-    // when finished, print string
-    
+    size_t wordSize = 7;
+
+    char* word = rand_string_alloc(wordSize);
+
+    printf("%s\n", word);
+
     return 0;
 }
 
@@ -23,4 +25,15 @@ char* rand_string_alloc(size_t size)
          rand_string(s, size);
      }
      return s;
+}
+
+void rand_string(char *s, size_t size)
+{
+    size_t i;
+
+    for (i = 0; i < size; i++)
+    {
+        s[i] = randchar();
+    }
+
 }

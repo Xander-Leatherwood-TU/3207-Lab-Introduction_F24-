@@ -8,18 +8,20 @@
 
 #include <time.h>
 #include <stdlib.h>
-
+#define MAX 90
+#define MIN 65
 
 char randchar()
 {
     srand(time(NULL));
-    int r = rand();
 
     char randomLetter;
 
     // random number generation
+    int randomNumber = rand() % (MAX-MIN + 1) + MIN;
 
     // convert number to char
+    randomLetter = (char)randomNumber;
 
     return randomLetter;
 }
