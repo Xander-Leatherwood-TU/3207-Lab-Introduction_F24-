@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include "random.h"
 #include <time.h>
+#define MAX 90
+#define MIN 65
+
 
 char* rand_string_alloc(size_t size);
 void rand_string(char* s, size_t size);
@@ -36,7 +39,10 @@ void rand_string(char *s, size_t size)
 
     for (i = 0; i < size; i++)
     {
-        s[i] = randchar();
+        // random number generation
+        int randomNumber = rand() % (MAX-MIN + 1) + MIN;
+
+        s[i] = randchar(randomNumber);
     }
 
 }
