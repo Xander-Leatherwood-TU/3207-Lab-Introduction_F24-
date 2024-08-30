@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include "random.h"
 
+char* rand_string(char* s, size_t size);
+
 char* rand_string_alloc(size_t size)
 {
      char *s = malloc(size + 1);
