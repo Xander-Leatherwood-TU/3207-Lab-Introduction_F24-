@@ -3,12 +3,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "random.h"
+#include <time.h>
 
 char* rand_string_alloc(size_t size);
 void rand_string(char* s, size_t size);
 
 int main()
 {
+    srand(time(NULL));
+
     size_t wordSize = 7;
 
     char* word = rand_string_alloc(wordSize);
